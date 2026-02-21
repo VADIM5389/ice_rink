@@ -75,7 +75,7 @@
                             {{ Auth::user()->full_name }}
                         </span>
 
-                        <form action="{{ route('logout') }}" method="POST" class="m-0">
+                        <form action="{{ route('logout') }}" method="GET" class="m-0">
                             @csrf
                             <button type="submit" class="btn btn-outline-danger">
                                 Выйти

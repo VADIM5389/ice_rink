@@ -33,7 +33,13 @@
 
                 <div class="mb-3">
                     <label class="form-label">Телефон</label>
-                    <input type="text" name="phone" class="form-control form-control-lg rounded-3" required>
+                    <input
+                        type="text"
+                        name="phone"
+                        class="form-control form-control-lg rounded-3 phone-mask"
+                        placeholder="+7 (___) ___-__-__"
+                        required
+                    >
                 </div>
 
                 <div class="mb-3">

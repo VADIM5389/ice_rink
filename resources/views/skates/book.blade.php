@@ -29,8 +29,7 @@
                             <input
                                 type="text"
                                 name="phone"
-                                id="phone"
-                                class="form-control form-control-lg rounded-3"
+                                class="form-control form-control-lg rounded-3 phone-mask"
                                 placeholder="+7 (___) ___-__-__"
                                 required
                             >
