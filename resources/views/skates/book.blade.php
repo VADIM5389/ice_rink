@@ -26,8 +26,14 @@
 
                         <div class="col-12 col-md-6">
                             <label class="form-label">Телефон</label>
-                            <input type="text" name="phone" class="form-control form-control-lg rounded-3"
-                                   placeholder="+7 (___) ___-__-__" required>
+                            <input
+                                type="text"
+                                name="phone"
+                                id="phone"
+                                class="form-control form-control-lg rounded-3"
+                                placeholder="+7 (___) ___-__-__"
+                                required
+                            >
                         </div>
 
                         <div class="col-12 col-md-6">
