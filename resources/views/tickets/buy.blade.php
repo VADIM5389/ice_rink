@@ -27,9 +27,6 @@
                         Оплатить 300₽ (демо)
                     </button>
 
-                    <div class="text-muted small text-center mt-2">
-                        ЮKassa подключим следующим шагом (тестовый магазин)
-                    </div>
                 </form>
 
             </div>

@@ -49,3 +49,28 @@ body {
 footer {
     font-size: 14px;
 }
+
+
+
+
+
+
+/* контакты */
+
+.contact-card,
+.map-card,
+.mini-card {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.contact-card:hover,
+.map-card:hover,
+.mini-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.mini-card{
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}

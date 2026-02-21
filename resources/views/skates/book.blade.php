@@ -65,10 +65,6 @@
                             <button class="btn btn-success w-100 py-2 rounded-3" type="submit">
                                 Забронировать (демо)
                             </button>
-
-                            <div class="text-muted small text-center mt-2">
-                                Оплату добавим дальше (ЮKassa: билет + бронь)
-                            </div>
                         </div>
                     </div>
                 </form>

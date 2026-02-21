@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\SkateBookingController;
 
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
@@ -41,3 +42,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/tickets/{ticket}', [TicketController::class, 'show'])->name('tickets.show');
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
+
