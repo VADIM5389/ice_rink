@@ -4,6 +4,8 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TicketController;
+use App\Http\Controllers\SkateBookingController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,4 +30,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 });
 
+// Покупка билета — доступно всем
+Route::get('/tickets/buy', [TicketController::class, 'showBuyForm'])->name('tickets.buy');
+Route::post('/tickets/buy', [TicketController::class, 'createPayment'])->name('tickets.pay');
 
+// Бронь коньков — только после входа
+Route::middleware('auth')->group(function () {
+    Route::get('/skates/book', [SkateBookingController::class, 'create'])->name('skates.book');
+    Route::post('/skates/book', [SkateBookingController::class, 'store'])->name('skates.book.store');
+});
+
+Route::get('/tickets/{ticket}', [TicketController::class, 'show'])->name('tickets.show');

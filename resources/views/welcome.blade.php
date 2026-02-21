@@ -1,6 +1,9 @@
 @extends('layout.index')
 @section('main')
 
-    <h1>Main page</h1>
+    <div class="container">
+        <h1>Main page</h1>
+    </div>
+    
 
 @endsection
