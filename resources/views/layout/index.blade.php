@@ -37,7 +37,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Расписание</a>
+                        <a class="nav-link" href="{{ route('schedule') }}">Расписание</a>
                     </li>
 
                     <li class="nav-item">
