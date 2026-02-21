@@ -1,44 +1,61 @@
 @extends('layout.index')
 @section('main')
 
-<div class="container">
-    <div class="form-register">
-        <div class="form-register__header">
-            <h1>Регистрация</h1>
-        </div>
+<div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="col-12 col-md-6 col-lg-5">
+        <div class="card shadow-lg border-0 rounded-4 p-4 register-card">
+            
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-dark">Регистрация на каток</h2>
+                <p class="text-muted">Создайте аккаунт и бронируйте лёд</p>
+            </div>
 
-        <div class="form-register__form">
-            {{-- ошибки валидации --}}
             @if ($errors->any())
                 <div class="alert alert-danger">
-                    <ul style="margin:0; padding-left:18px;">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
+                    @foreach ($errors->all() as $error)
+                        <div>{{ $error }}</div>
+                    @endforeach
                 </div>
             @endif
 
             <form action="{{ route('register') }}" method="POST">
                 @csrf
 
-                <label>ФИО</label>
-                <input type="text" name="full_name" value="{{ old('full_name') }}" required>
+                <div class="mb-3">
+                    <label class="form-label">ФИО</label>
+                    <input type="text" name="full_name" class="form-control form-control-lg rounded-3" required>
+                </div>
 
-                <label>Почта</label>
-                <input type="email" name="email" value="{{ old('email') }}" required>
+                <div class="mb-3">
+                    <label class="form-label">Почта</label>
+                    <input type="email" name="email" class="form-control form-control-lg rounded-3" required>
+                </div>
 
-                <label>Телефон</label>
-                <input type="text" name="phone" value="{{ old('phone') }}" required>
+                <div class="mb-3">
+                    <label class="form-label">Телефон</label>
+                    <input type="text" name="phone" class="form-control form-control-lg rounded-3" required>
+                </div>
 
-                <label>Пароль</label>
-                <input type="password" name="password" required>
+                <div class="mb-3">
+                    <label class="form-label">Пароль</label>
+                    <input type="password" name="password" class="form-control form-control-lg rounded-3" required>
+                </div>
 
-                <label>Повтор пароля</label>
-                <input type="password" name="password_confirmation" required>
+                <div class="mb-4">
+                    <label class="form-label">Повтор пароля</label>
+                    <input type="password" name="password_confirmation" class="form-control form-control-lg rounded-3" required>
+                </div>
 
-                <input type="submit" value="Зарегистрироваться">
+                <button type="submit" class="btn btn-success w-100 py-2 rounded-3 mb-3">
+                    Зарегистрироваться
+                </button>
+
+                <div class="text-center mb-2">
+                    <span class="text-muted">Уже есть аккаунт? <a href="{{ route('login') }}">Войти</a></span>
+                </div>
+
             </form>
+
         </div>
     </div>
 </div>

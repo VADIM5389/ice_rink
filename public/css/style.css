@@ -3,3 +3,24 @@
     margin: 0;
     font-family: Arial;
 }
+
+body {
+    background: linear-gradient(135deg, #e6f2ff, #ffffff);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.register-card {
+    background-color: #ffffff;
+}
+
+.btn-ice {
+    background-color: #1e90ff;
+    color: #ffffff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-ice:hover {
+    background-color: #0d6efd;
+    transform: translateY(-2px);
+}
